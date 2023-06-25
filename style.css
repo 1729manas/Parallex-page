@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+ 
+    height: 100vh;      /*wrapper me pura code so viewport ka height denge usko*/
+    perspective: 10px;  /* z axis me v kaam krna hai sp perspective on*/
+    overflow-x: hidden; /* x me scroll ni krwana hai*/
+    overflow-y: auto;   /* y me scroll krwana hai*/
+
+}
+
+#container{
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    z-index: -1;     /*layering me garbar hoga z index nii handel karoge toh b/w fg bg and adventure heading*/
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;         /*yha v dena kyuki 3 chij ko absolute se set kar rahe na do rhne se toh okk but 3 me ek chup skta hai*/
+    object-fit: cover;
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+h1{
+    color: white;
+    position: absolute;
+    font-size: 7rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing: 4px;
+    top: 5rem;
+    
+}
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding:5rem 0;
+}
+.secheading{
+    font-size:3rem;
+    padding:0 7rem;
+                display: block; /*no use of block*/
+}
+.text{
+    /* font-size:1rem; */
+                font-size:1rem;
+    /* padding:0 10rem; */
+                padding: 5rem;
+    /* margin:5rem 0; */
+    background-color:rgb(45,45,45);
+}
+
+.bg{
+    position: relative;   /*isse surfing biking sab ka pic handel kiye uska positioning relative rkhe kyuki desc ko absolute krke overlap karwana hai*/
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    /* height: 700px; */
+    height: 500px;
+}
+.desc{                         /* that BIKING PARAGLIDING SURFING JO HEADING JAISA H*/
+    position: absolute;        
+    background-color: white;   
+    padding: 0.5rem 2.5rem;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateX(-50%);
+    color:black;
+    font-size:2.5rem;
+    font-weight:600;
+}
+
+.bg1{
+    background-image: url(https://media.discordapp.net/attachments/1043089742780182603/1080000582682677319/sport-1.jpg);
+}
+.bg2{
+    background-image: url(https://media.discordapp.net/attachments/1043089742780182603/1080000583127269376/sport-2.jpg);
+}
+.bg3{
+    background-image: url(https://media.discordapp.net/attachments/1043089742780182603/1080000583638986853/sport-3.jpg);
+}
